@@ -1,0 +1,12 @@
+name = "Harbormaster"
+license = "GPL-3.0"
+licenselink = "https://github.com/harbormaster/hugo-theme-harbormaster/blob/master/LICENSE"
+description = "Harbormaster"
+homepage = "https://github.com/harbormaster/hugo-theme-harbormaster/"
+tags = ["docs"]
+features = ["Harbormaster"]
+min_version = 0.13
+
+[author]
+  name = "juliengk"
+  homepage = "http://julienkassar.com/"

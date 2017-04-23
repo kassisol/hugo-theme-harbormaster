@@ -1,0 +1,13 @@
+  <div class="row brand">
+    <div class="col-md-12">
+      <a class="navbar-brand" href="/"><img src="/img/harbormaster-logo.svg" height="48px" border="0" /></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="list-group" id="menu">
+        {{ partial "menu-sub.html" (dict "menu" .Site.Menus.main "thispage" .) }}
+      </div>
+    </div>
+  </div>
