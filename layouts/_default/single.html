@@ -1,6 +1,10 @@
 {{ partial "header.html" . }}
 
-<div class="container-fluid">
+<body>
+
+{{ partial "nav.html" . }}
+
+<div class="container-fluid container-doc">
   <div class="row">
     <div class="col-md-3" id="hmenu">
       {{ partial "menu.html" . }}
@@ -9,19 +13,19 @@
     <div class="col-md-7" id="hcontent">
       <div class="row">
         <div class="col-md-12">
+	  <h1>{{ .Title }}</h1>
+	  <hr/>
+
           {{ .Content }}
         </div>
       </div>
+    </div>
 
-      <hr />
+    <div class="col-md-2 hidden-xs hidden-sm" id="htoc">
+      {{ partial "toc-docs.html" . }}
 
-      <div class="row">
-        <div class="col-md-10">
-          &copy; 2016-2017 Kassisol
-        </div>
-        <div class="col-md-2">
-          <a class="btn btn-primary pull-right" href="#">Edit this Page&nbsp;<span class="glyphicon glyphicon-pencil"></span></a>
-        </div>
+      <div id="docs-top">
+        {{ partial "top-btn.html" . }}
       </div>
     </div>
   </div>

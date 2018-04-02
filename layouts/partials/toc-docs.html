@@ -1,0 +1,13 @@
+      <aside>
+        {{ if ne .Params.github_edit "" }}
+	<p id="edit-page">
+          <a target="_blank" href="{{ .Params.github_edit }}"><i class="far fa-edit"></i> Edit this page</a>
+	</p>
+        {{ end }}
+
+        {{ if .Params.toc }}
+	<p><strong>On this Page</strong></p>
+
+        {{ .TableOfContents }}
+        {{ end }}
+      </aside>

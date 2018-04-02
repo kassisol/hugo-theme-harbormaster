@@ -2,11 +2,11 @@
 
 {{ range .menu }}
   {{ if .HasChildren }}
-  <a href="#{{ .Identifier }}" class="list-group-item" data-toggle="collapse" data-parent="{{ if eq .Parent "" }}#menu{{ else }}#{{ .Parent }}{{ end }}"{{ if $thispage.HasMenuCurrent "main" . }} aria-expanded="true"{{ end }}>{{ .Name }}<span class="glyphicon glyphicon-chevron-{{ if $thispage.HasMenuCurrent "main" . }}up{{ else }}down{{ end }} pull-right"></span></a>
-    <div style="padding-left: 10px;" class="collapse{{ if $thispage.HasMenuCurrent "main" . }} in{{ end }}" id="{{ .Identifier }}">
+  <a href="#{{ .Identifier }}" class="list-group-item" data-toggle="collapse" data-parent="{{ if eq .Parent "" }}#menu{{ else }}#{{ .Parent }}{{ end }}"{{ if $thispage.HasMenuCurrent "docs" . }} aria-expanded="true"{{ end }}>{{ .Name }}<span class="glyphicon glyphicon-chevron-{{ if $thispage.HasMenuCurrent "docs" . }}up{{ else }}down{{ end }} pull-right"></span></a>
+    <div style="padding-left: 10px;" class="collapse{{ if $thispage.HasMenuCurrent "docs" . }} in{{ end }}" id="{{ .Identifier }}">
       {{ partial "menu-sub.html" (dict "menu" .Children "thispage" $thispage) }}
     </div>
   {{ else }}
-    <a href="{{ .URL }}" class="list-group-item{{ if $thispage.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a>
+    <a href="{{ .URL }}" class="list-group-item{{ if $thispage.IsMenuCurrent "docs" . }} active{{ end }}">{{ .Name }}</a>
   {{ end }}
 {{ end }}
